@@ -8,14 +8,14 @@ import { Course } from "./model/course";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"],
 })
-export class AppComponent implements OnInit {
-  courses;
-  constructor(private http: HttpClient) {}
-  ngOnInit() {
-    this.http.get("api/courses").subscribe((courses) => {
-      return (this.courses = courses);
-    });
-  }
+export class AppComponent {
+  courses = COURSES;
+  // constructor(private http: HttpClient) {}
+  // ngOnInit() {
+  //   this.http.get("api/courses").subscribe((courses) => {
+  //     return (this.courses = courses);
+  //   });
+  // }
   onCourseSelected(course: Course) {
     console.log("App comp", course);
   }
