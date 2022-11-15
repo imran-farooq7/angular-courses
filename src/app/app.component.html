@@ -7,7 +7,7 @@
 
 <div class="courses">
   <course-card
-    *ngFor="let crse of courses.payload; index as i"
+    *ngFor="let crse of courses; index as i"
     [course]="crse"
     (courseSelected)="onCourseSelected($event)"
     [carIndex]="i + 1"
